@@ -43,7 +43,11 @@ try {
   stage("cheerpjInit done");
   cheerpjCreateDisplay(480, 640);
   stage("display created, running WebMain");
-  const code = await cheerpjRunMain("WebMain", "/app/nfsmw-web.jar");
+  // CheerpJ maps /app/ to the server root; on a GitHub Pages project site the jar lives under /<repo>/.
+  const base = location.pathname.replace(/[^/]*$/, "");
+  const jar = "/app" + base + "nfsmw-web.jar";
+  stage("jar path: " + jar);
+  const code = await cheerpjRunMain("WebMain", jar);
   stage("WebMain exited with code " + code);
 } catch (e) {
   stage("ERROR: " + ((e && e.stack) || e));
