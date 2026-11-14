@@ -1,0 +1,8 @@
+{
+  "name": "nfsmw-web",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "postCreateCommand": "chmod +x web/build-web.sh && ./web/build-web.sh",
+  "postStartCommand": "cd web/dist && nohup python3 -m http.server 8080 > /tmp/server.log 2>&1 &",
+  "forwardPorts": [8080],
+  "portsAttributes": { "8080": { "label": "NFSMW web", "onAutoForward": "openBrowser", "visibility": "private" } }
+}

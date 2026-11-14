@@ -1,0 +1,16 @@
+name: Web build
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - run: ./web/build-web.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-dist
+          path: web/dist

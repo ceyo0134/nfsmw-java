@@ -20,3 +20,7 @@ implementation, including the .m3g / .fm3d loader. Game code in src/main/java is
   Right now every native is a tracer that logs the first call, so the page lists the natives in the order the game needs them.
   Each one is then replaced with a real WebGL-backed implementation.
 - Untested in a browser so far (only compiled). Do not host the jar publicly: it contains EA game assets.
+
+## Trying the web build privately (GitHub Codespaces)
+GitHub Pages is not available for private repos on this plan, so use Codespaces: Code > Codespaces > Create.
+It builds web/dist and serves it on port 8080 (private, login required); open the forwarded port in the browser.
