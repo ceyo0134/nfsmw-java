@@ -1,0 +1,793 @@
+[
+ {
+  "cls": "Fog",
+  "name": "_ctor",
+  "static": true,
+  "ret": "long",
+  "params": "long hInterface"
+ },
+ {
+  "cls": "Fog",
+  "name": "_setMode",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, int mode"
+ },
+ {
+  "cls": "Fog",
+  "name": "_getMode",
+  "static": true,
+  "ret": "int",
+  "params": "long handle"
+ },
+ {
+  "cls": "Fog",
+  "name": "_setLinear",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float near, float far"
+ },
+ {
+  "cls": "Fog",
+  "name": "_getDistance",
+  "static": true,
+  "ret": "float",
+  "params": "long handle, int which"
+ },
+ {
+  "cls": "Fog",
+  "name": "_setDensity",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float density"
+ },
+ {
+  "cls": "Fog",
+  "name": "_getDensity",
+  "static": true,
+  "ret": "float",
+  "params": "long handle"
+ },
+ {
+  "cls": "Fog",
+  "name": "_setColor",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, int RGB"
+ },
+ {
+  "cls": "Fog",
+  "name": "_getColor",
+  "static": true,
+  "ret": "int",
+  "params": "long handle"
+ },
+ {
+  "cls": "Group",
+  "name": "_ctor",
+  "static": true,
+  "ret": "long",
+  "params": "long hInterface"
+ },
+ {
+  "cls": "Group",
+  "name": "_addChild",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, long hNode"
+ },
+ {
+  "cls": "Group",
+  "name": "_removeChild",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, long hNode"
+ },
+ {
+  "cls": "Group",
+  "name": "_getChildCount",
+  "static": true,
+  "ret": "int",
+  "params": "long handle"
+ },
+ {
+  "cls": "Group",
+  "name": "_getChild",
+  "static": true,
+  "ret": "long",
+  "params": "long handle, int index"
+ },
+ {
+  "cls": "Group",
+  "name": "_pick3D",
+  "static": true,
+  "ret": "long",
+  "params": "long handle, int mask, float[] ray, float[] result"
+ },
+ {
+  "cls": "Group",
+  "name": "_pick2D",
+  "static": true,
+  "ret": "long",
+  "params": "long handle, int mask, float x, float y, long hCamera, float[] result"
+ },
+ {
+  "cls": "Interface",
+  "name": "_ctor",
+  "static": true,
+  "ret": "long",
+  "params": ""
+ },
+ {
+  "cls": "Interface",
+  "name": "_getClassID",
+  "static": true,
+  "ret": "int",
+  "params": "long hObject"
+ },
+ {
+  "cls": "Light",
+  "name": "_ctor",
+  "static": true,
+  "ret": "long",
+  "params": "long hInterface"
+ },
+ {
+  "cls": "Light",
+  "name": "_setIntensity",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float intensity"
+ },
+ {
+  "cls": "Light",
+  "name": "_getIntensity",
+  "static": true,
+  "ret": "float",
+  "params": "long handle"
+ },
+ {
+  "cls": "Light",
+  "name": "_setColor",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, int RGB"
+ },
+ {
+  "cls": "Light",
+  "name": "_getColor",
+  "static": true,
+  "ret": "int",
+  "params": "long handle"
+ },
+ {
+  "cls": "Light",
+  "name": "_setMode",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, int mode"
+ },
+ {
+  "cls": "Light",
+  "name": "_getMode",
+  "static": true,
+  "ret": "int",
+  "params": "long handle"
+ },
+ {
+  "cls": "Light",
+  "name": "_setSpotAngle",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float angle"
+ },
+ {
+  "cls": "Light",
+  "name": "_getSpotAngle",
+  "static": true,
+  "ret": "float",
+  "params": "long handle"
+ },
+ {
+  "cls": "Light",
+  "name": "_setSpotExponent",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float exponent"
+ },
+ {
+  "cls": "Light",
+  "name": "_getSpotExponent",
+  "static": true,
+  "ret": "float",
+  "params": "long handle"
+ },
+ {
+  "cls": "Light",
+  "name": "_setAttenuation",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float constant, float linear, float quadratic"
+ },
+ {
+  "cls": "Light",
+  "name": "_getAttenuation",
+  "static": true,
+  "ret": "float",
+  "params": "long handle, int type"
+ },
+ {
+  "cls": "Mesh",
+  "name": "_ctor",
+  "static": true,
+  "ret": "long",
+  "params": "long hInstance, long hVertices, long[] hTriangles, long[] hAppearances"
+ },
+ {
+  "cls": "Mesh",
+  "name": "_setAppearance",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, int index, long hAppearance"
+ },
+ {
+  "cls": "Mesh",
+  "name": "_getAppearance",
+  "static": true,
+  "ret": "long",
+  "params": "long handle, int index"
+ },
+ {
+  "cls": "Mesh",
+  "name": "_getIndexBuffer",
+  "static": true,
+  "ret": "long",
+  "params": "long handle, int index"
+ },
+ {
+  "cls": "Mesh",
+  "name": "_getVertexBuffer",
+  "static": true,
+  "ret": "long",
+  "params": "long handle"
+ },
+ {
+  "cls": "Mesh",
+  "name": "_getSubmeshCount",
+  "static": true,
+  "ret": "int",
+  "params": "long handle"
+ },
+ {
+  "cls": "MorphingMesh",
+  "name": "_ctor",
+  "static": true,
+  "ret": "long",
+  "params": "long hInstance, long handle, long[] hTargets, long[] hTriangles, long[] hAppearances"
+ },
+ {
+  "cls": "MorphingMesh",
+  "name": "_setWeights",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float[] weights"
+ },
+ {
+  "cls": "MorphingMesh",
+  "name": "_getWeights",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float[] weights"
+ },
+ {
+  "cls": "MorphingMesh",
+  "name": "_getMorphTarget",
+  "static": true,
+  "ret": "long",
+  "params": "long handle, int index"
+ },
+ {
+  "cls": "MorphingMesh",
+  "name": "_getMorphTargetCount",
+  "static": true,
+  "ret": "int",
+  "params": "long handle"
+ },
+ {
+  "cls": "Node",
+  "name": "_getTransformTo",
+  "static": true,
+  "ret": "boolean",
+  "params": "long handle, long hTarget, byte[] transform"
+ },
+ {
+  "cls": "Node",
+  "name": "_align",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, long refHandle"
+ },
+ {
+  "cls": "Node",
+  "name": "_setAlignment",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, long hZReference, int zTarget, long hYReference, int yTarget"
+ },
+ {
+  "cls": "Node",
+  "name": "_setAlphaFactor",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float alphaFactor"
+ },
+ {
+  "cls": "Node",
+  "name": "_getAlphaFactor",
+  "static": true,
+  "ret": "float",
+  "params": "long handle"
+ },
+ {
+  "cls": "Node",
+  "name": "_enable",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, int which, boolean enable"
+ },
+ {
+  "cls": "Node",
+  "name": "_isEnabled",
+  "static": true,
+  "ret": "boolean",
+  "params": "long handle, int which"
+ },
+ {
+  "cls": "Node",
+  "name": "_setScope",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, int id"
+ },
+ {
+  "cls": "Node",
+  "name": "_getScope",
+  "static": true,
+  "ret": "int",
+  "params": "long handle"
+ },
+ {
+  "cls": "Node",
+  "name": "_getParent",
+  "static": true,
+  "ret": "long",
+  "params": "long handle"
+ },
+ {
+  "cls": "Node",
+  "name": "_getZRef",
+  "static": true,
+  "ret": "long",
+  "params": "long handle"
+ },
+ {
+  "cls": "Node",
+  "name": "_getYRef",
+  "static": true,
+  "ret": "long",
+  "params": "long handle"
+ },
+ {
+  "cls": "Node",
+  "name": "_getSubtreeSize",
+  "static": true,
+  "ret": "int",
+  "params": "long handle"
+ },
+ {
+  "cls": "Node",
+  "name": "_getAlignmentTarget",
+  "static": true,
+  "ret": "int",
+  "params": "long handle, int axis"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_addAnimationTrack",
+  "static": true,
+  "ret": "int",
+  "params": "long hObject, long hAnimationTrack"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_removeAnimationTrack",
+  "static": true,
+  "ret": "void",
+  "params": "long hObject, long hAnimationTrack"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_getAnimationTrackCount",
+  "static": true,
+  "ret": "int",
+  "params": "long hObject"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_animate",
+  "static": true,
+  "ret": "int",
+  "params": "long hObject, int time"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_setUserID",
+  "static": true,
+  "ret": "void",
+  "params": "long hObject, int userID"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_getUserID",
+  "static": true,
+  "ret": "int",
+  "params": "long hObject"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_addRef",
+  "static": true,
+  "ret": "void",
+  "params": "long hObject"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_getAnimationTrack",
+  "static": true,
+  "ret": "long",
+  "params": "long hObject, int index"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_duplicate",
+  "static": true,
+  "ret": "long",
+  "params": "long hObject, long[] handles"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_getReferences",
+  "static": true,
+  "ret": "int",
+  "params": "long hObject, long[] handles"
+ },
+ {
+  "cls": "Object3D",
+  "name": "_find",
+  "static": true,
+  "ret": "long",
+  "params": "long hObject, int userID"
+ },
+ {
+  "cls": "Platform",
+  "name": "finalizeInterface",
+  "static": true,
+  "ret": "void",
+  "params": "long handle"
+ },
+ {
+  "cls": "Platform",
+  "name": "_finalizeObject",
+  "static": true,
+  "ret": "void",
+  "params": "long handle"
+ },
+ {
+  "cls": "Sprite3D",
+  "name": "_ctor",
+  "static": true,
+  "ret": "long",
+  "params": "long hInterface, boolean scaled, long hImage, long hAppearance"
+ },
+ {
+  "cls": "Sprite3D",
+  "name": "_isScaled",
+  "static": true,
+  "ret": "boolean",
+  "params": "long handle"
+ },
+ {
+  "cls": "Sprite3D",
+  "name": "_setAppearance",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, long hAppearance"
+ },
+ {
+  "cls": "Sprite3D",
+  "name": "_setImage",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, long hImage"
+ },
+ {
+  "cls": "Sprite3D",
+  "name": "_setCrop",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, int cropX, int cropY, int width, int height"
+ },
+ {
+  "cls": "Sprite3D",
+  "name": "_getCrop",
+  "static": true,
+  "ret": "int",
+  "params": "long handle, int which"
+ },
+ {
+  "cls": "Sprite3D",
+  "name": "_getAppearance",
+  "static": true,
+  "ret": "long",
+  "params": "long handle"
+ },
+ {
+  "cls": "Sprite3D",
+  "name": "_getImage",
+  "static": true,
+  "ret": "long",
+  "params": "long handle"
+ },
+ {
+  "cls": "Transform",
+  "name": "_mul",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] prod, byte[] left, byte[] right"
+ },
+ {
+  "cls": "Transform",
+  "name": "_setIdentity",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix"
+ },
+ {
+  "cls": "Transform",
+  "name": "_setMatrix",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix, float[] srcMatrix"
+ },
+ {
+  "cls": "Transform",
+  "name": "_getMatrix",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix, float[] dstMatrix"
+ },
+ {
+  "cls": "Transform",
+  "name": "_invert",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix"
+ },
+ {
+  "cls": "Transform",
+  "name": "_transpose",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix"
+ },
+ {
+  "cls": "Transform",
+  "name": "_rotate",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix, float angle, float ax, float ay, float az"
+ },
+ {
+  "cls": "Transform",
+  "name": "_rotateQuat",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix, float qx, float qy, float qz, float qw"
+ },
+ {
+  "cls": "Transform",
+  "name": "_scale",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix, float sx, float sy, float sz"
+ },
+ {
+  "cls": "Transform",
+  "name": "_translate",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix, float tx, float ty, float tz"
+ },
+ {
+  "cls": "Transform",
+  "name": "_transformTable",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix, float[] v"
+ },
+ {
+  "cls": "Transform",
+  "name": "_transformArray",
+  "static": true,
+  "ret": "void",
+  "params": "byte[] matrix, long handle, float[] out, boolean W"
+ },
+ {
+  "cls": "Transformable",
+  "name": "_setOrientation",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float angle, float ax, float ay, float az, boolean absolute"
+ },
+ {
+  "cls": "Transformable",
+  "name": "_preRotate",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float angle, float ax, float ay, float az"
+ },
+ {
+  "cls": "Transformable",
+  "name": "_getOrientation",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float[] angleAxis"
+ },
+ {
+  "cls": "Transformable",
+  "name": "_setScale",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float sx, float sy, float sz, boolean absolute"
+ },
+ {
+  "cls": "Transformable",
+  "name": "_getScale",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float[] scale"
+ },
+ {
+  "cls": "Transformable",
+  "name": "_setTranslation",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float tx, float ty, float tz, boolean absolute"
+ },
+ {
+  "cls": "Transformable",
+  "name": "_getTranslation",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, float[] translation"
+ },
+ {
+  "cls": "Transformable",
+  "name": "_setTransform",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, byte[] transform"
+ },
+ {
+  "cls": "Transformable",
+  "name": "_getTransform",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, byte[] transform"
+ },
+ {
+  "cls": "Transformable",
+  "name": "_getComposite",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, byte[] transform"
+ },
+ {
+  "cls": "VertexBuffer",
+  "name": "_ctor",
+  "static": true,
+  "ret": "long",
+  "params": "long hInterface"
+ },
+ {
+  "cls": "VertexBuffer",
+  "name": "_setColors",
+  "static": true,
+  "ret": "void",
+  "params": "long hBuffer, long hArray"
+ },
+ {
+  "cls": "VertexBuffer",
+  "name": "_setNormals",
+  "static": true,
+  "ret": "void",
+  "params": "long hBuffer, long hArray"
+ },
+ {
+  "cls": "VertexBuffer",
+  "name": "_setTexCoords",
+  "static": true,
+  "ret": "void",
+  "params": "long hBuffer, int unit, long hArray, float scale, float[] bias"
+ },
+ {
+  "cls": "VertexBuffer",
+  "name": "_setVertices",
+  "static": true,
+  "ret": "void",
+  "params": "long hBuffer, long hArray, float scale, float[] bias"
+ },
+ {
+  "cls": "VertexBuffer",
+  "name": "_setDefaultColor",
+  "static": true,
+  "ret": "void",
+  "params": "long hBuffer, int ARGB"
+ },
+ {
+  "cls": "VertexBuffer",
+  "name": "_getDefaultColor",
+  "static": true,
+  "ret": "int",
+  "params": "long hBuffer"
+ },
+ {
+  "cls": "VertexBuffer",
+  "name": "_getArray",
+  "static": true,
+  "ret": "long",
+  "params": "long hBuffer, int which, float[] scaleBias"
+ },
+ {
+  "cls": "VertexBuffer",
+  "name": "_getVertexCount",
+  "static": true,
+  "ret": "int",
+  "params": "long hBuffer"
+ },
+ {
+  "cls": "World",
+  "name": "_ctor",
+  "static": true,
+  "ret": "long",
+  "params": "long hInterface"
+ },
+ {
+  "cls": "World",
+  "name": "_setActiveCamera",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, long hCamera"
+ },
+ {
+  "cls": "World",
+  "name": "_setBackground",
+  "static": true,
+  "ret": "void",
+  "params": "long handle, long hBackground"
+ },
+ {
+  "cls": "World",
+  "name": "_getActiveCamera",
+  "static": true,
+  "ret": "long",
+  "params": "long handle"
+ },
+ {
+  "cls": "World",
+  "name": "_getBackground",
+  "static": true,
+  "ret": "long",
+  "params": "long handle"
+ }
+]
