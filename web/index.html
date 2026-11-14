@@ -17,15 +17,23 @@ import { natives } from "./m3g-natives.js";
 
 const log = document.getElementById("log");
 const seen = [];
-const origWarn = console.warn;
-// Every M3G native the game calls for the first time is listed here, in call order.
-console.warn = (...a) => {
-  origWarn(...a);
-  if (String(a[0]).startsWith("[m3g")) {
-    seen.push(a[1]);
-    log.textContent = "M3G natives hit so far (" + seen.length + "):\n" + seen.join("\n");
-  }
-};
+const lines = [];
+function render() {
+  log.textContent = "M3G natives hit (" + seen.length + "):\n" + seen.join("\n") +
+    "\n\n--- console (last 40) ---\n" + lines.slice(-40).join("\n");
+}
+// Phone has no dev console, so mirror console output and errors onto the page.
+for (const k of ["log", "warn", "error"]) {
+  const orig = console[k].bind(console);
+  console[k] = (...a) => {
+    orig(...a);
+    if (k === "warn" && String(a[0]).startsWith("[m3g")) seen.push(a[1]);
+    else lines.push(k + ": " + a.map(x => (x && x.stack) || String(x)).join(" "));
+    render();
+  };
+}
+window.addEventListener("error", e => { lines.push("ERR: " + e.message); render(); });
+window.addEventListener("unhandledrejection", e => { lines.push("REJECT: " + ((e.reason && e.reason.stack) || e.reason)); render(); });
 
 try {
   await cheerpjInit({ natives });
