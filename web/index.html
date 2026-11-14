@@ -35,14 +35,21 @@ for (const k of ["log", "warn", "error"]) {
 window.addEventListener("error", e => { lines.push("ERR: " + e.message); render(); });
 window.addEventListener("unhandledrejection", e => { lines.push("REJECT: " + ((e.reason && e.reason.stack) || e.reason)); render(); });
 
+function stage(t) { lines.push("[" + ((performance.now() / 1000) | 0) + "s] " + t); render(); }
+stage("page loaded, starting CheerpJ");
+const watchdog = setInterval(() => stage("still working (the first start downloads the Java runtime, can take a few minutes on mobile data)"), 20000);
 try {
   await cheerpjInit({ natives });
+  stage("cheerpjInit done");
   cheerpjCreateDisplay(480, 640);
-  await cheerpjRunMain("WebMain", "/app/nfsmw-web.jar");
+  stage("display created, running WebMain");
+  const code = await cheerpjRunMain("WebMain", "/app/nfsmw-web.jar");
+  stage("WebMain exited with code " + code);
 } catch (e) {
-  log.textContent = "Error: " + e;
+  stage("ERROR: " + ((e && e.stack) || e));
   console.error(e);
 }
+clearInterval(watchdog);
 </script>
 </body>
 </html>

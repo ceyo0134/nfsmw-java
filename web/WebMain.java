@@ -25,8 +25,16 @@ public class WebMain {
   }
 
   public static void main(String[] args) throws Exception {
-    final AppMain midlet = new AppMain();
-    midlet.startApp();
+    System.out.println("WebMain: creating AppMain");
+    try {
+      final AppMain midlet = new AppMain();
+      System.out.println("WebMain: AppMain created, calling startApp");
+      midlet.startApp();
+      System.out.println("WebMain: startApp returned");
+    } catch (Throwable t) {
+      System.out.println("WebMain: FAILED " + t);
+      t.printStackTrace(System.out);
+    }
     final Frame frame = new Frame("NFS Most Wanted");
     final java.awt.Canvas view = new java.awt.Canvas() {
       public void paint(Graphics g) {
