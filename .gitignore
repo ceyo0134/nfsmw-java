@@ -3,4 +3,10 @@
 .gradle
 build
 bin
-.settings
+.settingsweb/out/
+web/work/
+web/frames/
+web/srcs.txt
+out/
+srcs.txt
+manifest.txt
